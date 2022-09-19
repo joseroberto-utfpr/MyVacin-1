@@ -27,18 +27,18 @@ const App = () => {
     
     <View style={styles.container}>
         
-         <LinearGradient
+        {/*<LinearGradient
         // Background Linear Gradient 
         //colors={['rgba(84, 131, 126, 0.2)', 'transparent']}
         colors={['rgba(84, 84, 84, 84)', 'solid']}
-        /*style={styles.container}*/>
+        /*style={styles.container}*/>*/}
          
          <ImageBackground source={backGroundAppImage} resizeMode="cover" style={styles.imagemBak}>
         </ImageBackground>
          
          
          
-        </LinearGradient>
+        {/*</LinearGradient>*/}
          
       
       
