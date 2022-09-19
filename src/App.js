@@ -26,14 +26,22 @@ const App = () => {
   return (
     
     <View style={styles.container}>
-             <LinearGradient
+         
+         <ImageBackground source={backGroundAppImage} resizeMode="cover" style={styles.imagemBak}>
+        </ImageBackground>
+         
+         
+         {/*<LinearGradient
         // Background Linear Gradient
         colors={['rgba(84, 131, 126, 0.2)', 'transparent']}
-        style={styles.imagemBak}
+        //style={styles.container}
         
-        <ImageBackground source={backGroundAppImage} resizeMode="cover" style={styles.imbagemBak}>
+            
+        
+        
         
          />
+         */}
       
       
         
@@ -57,9 +65,9 @@ const App = () => {
 
       <Text style={{ fontSize: 24, marginTop: 30 }}>{resultado}</Text>
     </View>
-    */}
-    </ImageBackground>
     
+    </ImageBackground>
+    */}
     </View>
   );
 };
