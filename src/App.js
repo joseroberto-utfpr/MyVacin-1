@@ -5,17 +5,13 @@ import { ImageBackground } from "react-native-web";
 import MyInput from "./components/MyInput";
 import { LinearGradient } from "expo-linear-gradient";
 
-
 //Especificação do componente
 const App = () => {
   const [peso, setPeso] = useState();
   const [altura, setAltura] = useState();
   const [resultado, setResultado] = useState();
-  
-  const backGroundAppImage = require('./imagens/vaccine-background.jpg')
-  
-  
 
+  const backGroundAppImage = require("./imagens/vaccine-background.jpg");
 
   const calcularIMC = () => {
     let imc = peso / (altura * altura);
@@ -24,49 +20,32 @@ const App = () => {
   };
 
   return (
-    
     <View style={styles.container}>
-        
-        {/*<LinearGradient
-        // Background Linear Gradient 
-        //colors={['rgba(84, 131, 126, 0.2)', 'transparent']}
-        colors={['rgba(84, 84, 84, 84)', 'solid']}
-        /*style={styles.container}*/>*/}
-         
-         <ImageBackground source={backGroundAppImage} resizeMode="cover" style={styles.imagemBak}>
+      <ImageBackground
+        source={backGroundAppImage}
+        resizeMode="cover"
+        style={styles.imagemBak}
+      >
+        <View style={styles.container}>
+          <Image
+            style={styles.imagem}
+            source={require("./imagens/balanca.jpg")}
+          />
 
-        {/* </ImageBackground>*/}
-         
-         
-         
-        {/*</LinearGradient>*/}
-         
-      
-      
-        
-      {/*<ImageBackground style={styles.imagem} source={require('./imagens/vaccine-background.jpg')} />*/}
-        
-    
-      <View style={styles.container}>
-      
-      <Image style={styles.imagem} source={require("./imagens/balanca.jpg")} />
-      
-      <Text style={styles.textTitulo}>Calculadora de IMC JRMS</Text>
+          <Text style={styles.textTitulo}>Calculadora de IMC JRMS</Text>
 
-      <View style={styles.inputs}>
-        <MyInput rotulo="Peso" valor={peso} setText={setPeso} />
-        <MyInput rotulo="Altura" valor={altura} setText={setAltura} />
-      </View>
+          <View style={styles.inputs}>
+            <MyInput rotulo="Peso" valor={peso} setText={setPeso} />
+            <MyInput rotulo="Altura" valor={altura} setText={setAltura} />
+          </View>
 
-      <TouchableOpacity style={styles.button} onPress={calcularIMC}>
-        <Text style={styles.buttonText}>CALCULAR</Text>
-      </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={calcularIMC}>
+            <Text style={styles.buttonText}>CALCULAR</Text>
+          </TouchableOpacity>
 
-      <Text style={{ fontSize: 24, marginTop: 30 }}>{resultado}</Text>
-    </View>
-    
-    </ImageBackground>
-    
+          <Text style={{ fontSize: 24, marginTop: 30 }}>{resultado}</Text>
+        </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -74,10 +53,9 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //flexDirection: "column",
-    //alignItems: "center",
+    flexDirection: "column",
+    alignItems: "center"
     //padding: 15
-    
   },
   button: {
     paddingHorizontal: 50,
@@ -102,17 +80,12 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
     resizeMode: "stretch"
-    
   },
   imagemBak: {
     flex: 1,
-    justifyContent: "center"
-    
-    
+    justifyContent: "adjust"
   },
-  
-  
-  
+
   textTitulo: {
     fontSize: 40,
     color: "red",
