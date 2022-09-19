@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { ImageBackground } from "react-native-web";
 import MyInput from "./components/MyInput";
-import { LinearGradient } from "expo-linear-gradient";
+import LinearGradient from "react-native-linear-gradient";
 
 
 //Especificação do componente
@@ -29,9 +29,11 @@ const App = () => {
         
          <LinearGradient
         // Background Linear Gradient 
-        colors={['rgba(84, 131, 126, 0.2)', 'transparent']}
+        colors={['red', 'yellow', 'green']}
+        //colors={['rgba(84, 131, 126, 0.2)]} /*', 'transparent']}
+        
         //colors={['rgba(84, 84, 84, 84)', 'solid']}
-        /*style={styles.container}*/>
+        style={styles.container}>
          
          <ImageBackground source={backGroundAppImage} resizeMode="cover" style={styles.imagemBak}>
         </ImageBackground>
