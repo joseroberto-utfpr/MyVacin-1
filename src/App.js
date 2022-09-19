@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { ImageBackground } from "react-native-web";
 import MyInput from "./components/MyInput";
+import { LinearGradient } from "expo-linear-gradient";
 
 
 //Especificação do componente
@@ -12,8 +13,8 @@ const App = () => {
   const [resultado, setResultado] = useState();
   
   const backGroundAppImage = require('./imagens/vaccine-background.jpg')
-  //const image = { uri: "./imagens/vaccine-background.jpg"};
-   //const image = {uri: "https://reactjs.org/logo-og.png" };
+  
+  
 
 
   const calcularIMC = () => {
@@ -26,6 +27,13 @@ const App = () => {
     
     <View style={styles.container}>
         <ImageBackground source={backGroundAppImage} resizeMode="cover" style={styles.imagemBak}>
+             <LinearGradient
+        // Background Linear Gradient
+        colors={['rgba(84, 131, 126, 0.2)', 'transparent']}
+        style={styles.imagemBak}
+         />
+      
+      
         
       {/*<ImageBackground style={styles.imagem} source={require('./imagens/vaccine-background.jpg')} />*/}
         
@@ -90,6 +98,7 @@ const styles = StyleSheet.create({
   imagemBak: {
     flex: 1,
     justifyContent: "center"
+    
     
   },
   
