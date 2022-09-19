@@ -26,22 +26,20 @@ const App = () => {
   return (
     
     <View style={styles.container}>
+        
+         <LinearGradient
+        // Background Linear Gradient 
+        //colors={['rgba(84, 131, 126, 0.2)', 'transparent']}
+        colors={['rgba(84, 84, 84, 84)', 'solid']}
+        /*style={styles.container}*/>
          
          <ImageBackground source={backGroundAppImage} resizeMode="cover" style={styles.imagemBak}>
         </ImageBackground>
          
          
-         {/*<LinearGradient
-        // Background Linear Gradient
-        colors={['rgba(84, 131, 126, 0.2)', 'transparent']}
-        //style={styles.container}
-        
-            
-        
-        
-        
-         />
-         */}
+         
+        </LinearGradient>
+         
       
       
         
