@@ -46,7 +46,7 @@ const App = () => {
         
       {/*<ImageBackground style={styles.imagem} source={require('./imagens/vaccine-background.jpg')} />*/}
         
-    {/*
+    
       <View style={styles.container}>
       
       <Image style={styles.imagem} source={require("./imagens/balanca.jpg")} />
@@ -66,7 +66,7 @@ const App = () => {
     </View>
     
     </ImageBackground>
-    */}
+    
     </View>
   );
 };
