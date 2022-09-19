@@ -27,20 +27,26 @@ const App = () => {
     
     <View style={styles.container}>
         
-         <LinearGradient
+        {/*<LinearGradient
         // Background Linear Gradient 
+        draft/bold-hamilton
         colors={['red', 'yellow', 'green']}
         //colors={['rgba(84, 131, 126, 0.2)]} /*', 'transparent']}
         
         //colors={['rgba(84, 84, 84, 84)', 'solid']}
         style={styles.container}>
+        //colors={['rgba(84, 131, 126, 0.2)', 'transparent']}
+        colors={['rgba(84, 84, 84, 84)', 'solid']}
+        /*style={styles.container}*/>*/}
+        
          
          <ImageBackground source={backGroundAppImage} resizeMode="cover" style={styles.imagemBak}>
+
         </ImageBackground>
          
          
          
-        </LinearGradient>
+        {/*</LinearGradient>*/}
          
       
       
