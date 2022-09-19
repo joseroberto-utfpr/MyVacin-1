@@ -1,7 +1,7 @@
 //Imports
 import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
-import { ImageBackground } from "react-native";
+import { ImageBackground } from "react-native-web";
 import MyInput from "./components/MyInput";
 
 
@@ -10,6 +10,11 @@ const App = () => {
   const [peso, setPeso] = useState();
   const [altura, setAltura] = useState();
   const [resultado, setResultado] = useState();
+  
+  const backGroundAppImage = require('./imagens/vaccine-background.jpg')
+  //const image = { uri: "./imagens/vaccine-background.jpg"};
+   //const image = {uri: "https://reactjs.org/logo-og.png" };
+
 
   const calcularIMC = () => {
     let imc = peso / (altura * altura);
@@ -19,11 +24,12 @@ const App = () => {
 
   return (
     
-    <View style={styles.imagemBak}>
-      {<ImageBackground style={styles.imagem} source={require('./imagens/vaccine-background.jpg')} />}
-    
-    
-    
+    <View style={styles.container}>
+        <ImageBackground source={backGroundAppImage} resizeMode="cover" style={styles.imagemBak}>
+        
+      {/*<ImageBackground style={styles.imagem} source={require('./imagens/vaccine-background.jpg')} />*/}
+        
+    {/*
       <View style={styles.container}>
       
       <Image style={styles.imagem} source={require("./imagens/balanca.jpg")} />
@@ -41,6 +47,8 @@ const App = () => {
 
       <Text style={{ fontSize: 24, marginTop: 30 }}>{resultado}</Text>
     </View>
+    */}
+    </ImageBackground>
     
     </View>
   );
@@ -49,9 +57,9 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-    padding: 15
+    //flexDirection: "column",
+    //alignItems: "center",
+    //padding: 15
     
   },
   button: {
@@ -80,10 +88,8 @@ const styles = StyleSheet.create({
     
   },
   imagemBak: {
-    flex 1,
-    width: 200,
-    height: 200,
-    resizeMode: "stretch"
+    flex: 1,
+    justifyContent: "center"
     
   },
   
