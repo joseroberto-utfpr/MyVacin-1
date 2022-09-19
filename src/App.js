@@ -34,6 +34,7 @@ const App = () => {
         /*style={styles.container}*/>*/}
          
          <ImageBackground source={backGroundAppImage} resizeMode="cover" style={styles.imagemBak}>
+
         </ImageBackground>
          
          
