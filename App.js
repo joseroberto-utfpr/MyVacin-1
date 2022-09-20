@@ -4,12 +4,13 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { ImageBackground } from "react-native-web";
 import MyInput from "./src/components/MyInput";
 
-//import { LinearGradient } from "expo-linear-gradient";
+import { LinearGradient } from "expo-linear-gradient";
+//import LinearGradient from 'react-native';
 
 //Especificação do componente
 const App = () => {
-  const [peso, setPeso] = useState();
-  const [altura, setAltura] = useState();
+  const [email, setEmail] = useState();
+  const [senha, setSenha] = useState();
   const [resultado, setResultado] = useState();
 
   const backGroundAppImage = require("./src/imagens/vaccine-background.jpg");
@@ -28,46 +29,58 @@ const App = () => {
         style={styles.imagemBak}
       >
         <View style={styles.container}>
-          <View style={styles.header}>
-            <Image
-              style={styles.imagem}
-              source={require("./src/imagens/icon-vaccine.png")}
-            />
+          <LinearGradient
+            colors={[
+              "rgba(84, 131, 126, 0.2)",
+              "rgba(255, 255, 255, 0.62)",
+              "rgba(221, 230, 229, 0.68)",
+              "rgba(59, 94, 90, 0.51)"
+            ]}
+            style={styles.linearGradient}
+          >
+            <View style={styles.header}>
+              <Image
+                style={styles.imagem}
+                source={require("./src/imagens/icon-vaccine.png")}
+              />
 
-            <Text style={styles.textTop}> My Health </Text>
-          </View>
+              <Text style={styles.textTop}> My Health </Text>
+            </View>
 
-          <Text style={styles.textTitulo}>
-            Controle suas vacinas e fique seguro
-          </Text>
+            <Text style={styles.textTitulo}>
+              Controle suas vacinas e fique seguro
+            </Text>
 
-          <View style={styles.inputs}>
-            <MyInput rotulo="E-mail" valor={peso} setText={setPeso} />
-            <MyInput rotulo="Senha" valor={altura} setText={setAltura} />
-          </View>
-          <Text style={styles.textInfoEmail}>E-mail e/ou senha inválidos.</Text>
+            <View style={styles.inputs}>
+              <MyInput rotulo="E-mail" valor={email} setText={setEmail} />
+              <MyInput rotulo="Senha" valor={senha} setText={setSenha} />
+            </View>
+            <Text style={styles.textInfoEmail}>
+              E-mail e/ou senha inválidos.
+            </Text>
 
-          <View style={styles.groupButtons}>
-            <TouchableOpacity style={styles.buttonIn} onPress={calcularIMC}>
-              <Text style={styles.buttonText}>Entrar</Text>
-            </TouchableOpacity>
+            <View style={styles.groupButtons}>
+              <TouchableOpacity style={styles.buttonIn} onPress={calcularIMC}>
+                <Text style={styles.buttonText}>Entrar</Text>
+              </TouchableOpacity>
 
-            <TouchableOpacity
-              style={styles.buttonAccount}
-              onPress={calcularIMC}
-            >
-              <Text style={styles.buttonText}>Criar minha conta</Text>
-            </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.buttonAccount}
+                onPress={calcularIMC}
+              >
+                <Text style={styles.buttonText}>Criar minha conta</Text>
+              </TouchableOpacity>
 
-            <TouchableOpacity
-              style={styles.buttonForgotPass}
-              onPress={calcularIMC}
-            >
-              <Text style={styles.buttonText}>Esqueci minha senha</Text>
-            </TouchableOpacity>
-          </View>
+              <TouchableOpacity
+                style={styles.buttonForgotPass}
+                onPress={calcularIMC}
+              >
+                <Text style={styles.buttonText}>Esqueci minha senha</Text>
+              </TouchableOpacity>
+            </View>
 
-          <Text style={{ fontSize: 24, marginTop: 30 }}>{resultado}</Text>
+            {/*<Text style={{ fontSize: 24, marginTop: 30 }}>{resultado}</Text>*/}
+          </LinearGradient>
         </View>
       </ImageBackground>
     </>
@@ -80,10 +93,18 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     padding: 15,
-    opacity: "inherit",
-    backgroundColor: "transparent"
+    //ImageBackground: LinearGradient('rgba(221, 230, 229, 0.68)')
+    backgroundColor: "rgba(221, 230, 229, 0.68)"
   },
-
+  linearGradient: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center"
+    //opacity: '0.1',
+    //padding: 15,
+    //ImageBackground: LinearGradient('rgba(221, 230, 229, 0.68)')
+    //backgroundColor: 'rgba(221, 230, 229, 0.68)',
+  },
   buttonIn: {
     flex: 1,
     alignItems: "center",
@@ -95,7 +116,8 @@ const styles = StyleSheet.create({
     marginTop: 50,
     width: "188px",
     fontSize: "28px",
-    height: "50px"
+    height: "50px",
+    bottom: 10
   },
   buttonAccount: {
     flex: 1,
@@ -108,7 +130,8 @@ const styles = StyleSheet.create({
     marginTop: 50,
     width: "285px",
     fontSize: "28px",
-    height: "50px"
+    height: "50px",
+    bottom: 10
   },
   buttonForgotPass: {
     flex: 1,
@@ -121,7 +144,8 @@ const styles = StyleSheet.create({
     marginTop: 50,
     width: "285px",
     fontSize: "28px",
-    height: "37px"
+    height: "37px",
+    bottom: 10
   },
 
   groupButtons: {
@@ -140,7 +164,9 @@ const styles = StyleSheet.create({
     //width: "50%",
     flexDirection: "colum",
     justifyContent: "center",
-    marginTop: 40
+
+    marginTop: 40,
+    bottom: 10
   },
 
   imagem: {
@@ -151,8 +177,9 @@ const styles = StyleSheet.create({
 
   imagemBak: {
     flex: 1,
-    justifyContent: "adjust",
-    opacity: 1
+    justifyContent: "adjust"
+    //opacity: 0.1,
+
     //backgroundColor: 'gray',
   },
 
