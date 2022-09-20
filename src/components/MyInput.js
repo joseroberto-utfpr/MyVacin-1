@@ -21,7 +21,9 @@ const MyInput = (props) => {
 
 const styles = StyleSheet.create({
   rotulo: {
-    fontSize: "28px"
+    fontSize: "28px",
+    color: "#FFFFFF",
+    padding: 10
 
     //flexDirection: 'row'
   },

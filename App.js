@@ -42,8 +42,8 @@ const App = () => {
           </Text>
 
           <View style={styles.inputs}>
-            <MyInput rotulo="Peso" valor={peso} setText={setPeso} />
-            <MyInput rotulo="Altura" valor={altura} setText={setAltura} />
+            <MyInput rotulo="E-mail" valor={peso} setText={setPeso} />
+            <MyInput rotulo="Senha" valor={altura} setText={setAltura} />
           </View>
           <Text style={styles.textInfoEmail}>E-mail e/ou senha inválidos.</Text>
 
@@ -127,15 +127,7 @@ const styles = StyleSheet.create({
   groupButtons: {
     flex: 2,
     alignItems: "center",
-    //justifyContent: "center",
-    //paddingVertical: 0,
-    //backgroundColor: "#B5C7D1",
-    //borderRadius: 0,
-    //elevation: 5,
     marginTop: 50
-    //width: "285px",
-    //fontSize: "28px",
-    //height: "37px"
   },
 
   buttonText: {
@@ -170,7 +162,8 @@ const styles = StyleSheet.create({
     color: "#419ED7",
     fontWeight: "400",
     fontFamily: "AveriaLibre",
-    textAlign: "center"
+    textAlign: "center",
+    padding: 15
     //justifyContent: "center",
   },
 
