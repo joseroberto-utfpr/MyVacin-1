@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     fontSize: "48px",
     color: "#419ED7",
     fontWeight: "400",
-    fontFamily: "AveriaLibre",
+    fontFamily: "Averia",
     textAlign: "center",
     padding: 15
     //justifyContent: "center",
@@ -174,14 +174,14 @@ const styles = StyleSheet.create({
 
     color: "#419ED7",
     fontWeight: "bold",
-    fontFamily: "AveriaLibre"
+    fontFamily: "Averia"
   },
 
   textInfoEmail: {
     fontSize: "24px",
     color: "#FD7979",
     fontWeight: "bold",
-    fontFamily: "AveriaLibre"
+    fontFamily: "Averia"
   },
 
   header: {
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
     fontSize: "68px",
     color: "#419ED7",
     fontWeight: "400",
-    fontFamily: "AveriaLibre"
+    fontFamily: "Averia"
   }
 });
 
