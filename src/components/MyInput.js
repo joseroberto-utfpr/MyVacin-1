@@ -22,6 +22,7 @@ const MyInput = (props) => {
 const styles = StyleSheet.create({
   rotulo: {
     fontSize: "28px"
+
     //flexDirection: 'row'
   },
   textInput: {
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
   grupo: {
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 10
+    padding: 12
   }
 });
 

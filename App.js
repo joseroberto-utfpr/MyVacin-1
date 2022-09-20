@@ -38,7 +38,7 @@ const App = () => {
           </View>
 
           <Text style={styles.textTitulo}>
-            Controle Suas Vacinas e Fique Seguro
+            Controle suas vacinas e fique seguro
           </Text>
 
           <View style={styles.inputs}>
@@ -47,20 +47,25 @@ const App = () => {
           </View>
           <Text style={styles.textInfoEmail}>E-mail e/ou senha inválidos.</Text>
 
-          <TouchableOpacity style={styles.buttonIn} onPress={calcularIMC}>
-            <Text style={styles.buttonText}>Entrar</Text>
-          </TouchableOpacity>
+          <View style={styles.groupButtons}>
+            <TouchableOpacity style={styles.buttonIn} onPress={calcularIMC}>
+              <Text style={styles.buttonText}>Entrar</Text>
+            </TouchableOpacity>
 
-          <TouchableOpacity style={styles.buttonAccount} onPress={calcularIMC}>
-            <Text style={styles.buttonText}>Criar minha conta</Text>
-          </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonAccount}
+              onPress={calcularIMC}
+            >
+              <Text style={styles.buttonText}>Criar minha conta</Text>
+            </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.buttonForgotPass}
-            onPress={calcularIMC}
-          >
-            <Text style={styles.buttonText}>Esqueci minha senha</Text>
-          </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonForgotPass}
+              onPress={calcularIMC}
+            >
+              <Text style={styles.buttonText}>Esqueci minha senha</Text>
+            </TouchableOpacity>
+          </View>
 
           <Text style={{ fontSize: 24, marginTop: 30 }}>{resultado}</Text>
         </View>
@@ -71,7 +76,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 4,
+    flex: 1,
     flexDirection: "column",
     alignItems: "center",
     padding: 15,
@@ -87,10 +92,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#37BD6D",
     borderRadius: 0,
     elevation: 5,
-    marginTop: 30,
-    width: "165px",
+    marginTop: 50,
+    width: "188px",
     fontSize: "28px",
-    height: "34px"
+    height: "50px"
   },
   buttonAccount: {
     flex: 1,
@@ -100,10 +105,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#419ED7",
     borderRadius: 0,
     elevation: 5,
-    marginTop: 30,
-    width: "165px",
+    marginTop: 50,
+    width: "285px",
     fontSize: "28px",
-    height: "34px"
+    height: "50px"
   },
   buttonForgotPass: {
     flex: 1,
@@ -113,10 +118,24 @@ const styles = StyleSheet.create({
     backgroundColor: "#B5C7D1",
     borderRadius: 0,
     elevation: 5,
-    marginTop: 30,
-    width: "165px",
+    marginTop: 50,
+    width: "285px",
     fontSize: "28px",
-    height: "34px"
+    height: "37px"
+  },
+
+  groupButtons: {
+    flex: 2,
+    alignItems: "center",
+    //justifyContent: "center",
+    //paddingVertical: 0,
+    //backgroundColor: "#B5C7D1",
+    //borderRadius: 0,
+    //elevation: 5,
+    marginTop: 50
+    //width: "285px",
+    //fontSize: "28px",
+    //height: "37px"
   },
 
   buttonText: {
@@ -150,12 +169,15 @@ const styles = StyleSheet.create({
     fontSize: "48px",
     color: "#419ED7",
     fontWeight: "400",
-    fontFamily: "AveriaLibre"
+    fontFamily: "AveriaLibre",
+    textAlign: "center"
+    //justifyContent: "center",
   },
 
   textTop: {
     flex: 1,
     fontSize: 40,
+    textDecorationLine: "underline",
 
     color: "#419ED7",
     fontWeight: "bold",
