@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { ImageBackground } from "react-native-web";
 import MyInput from "./components/MyInput";
 //import { LinearGradient } from "expo-linear-gradient";
-import React from 'react';
+
 
 //Especificação do componente
 const App = () => {
