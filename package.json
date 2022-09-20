@@ -9,6 +9,7 @@
     "react": "17.0.*",
     "react-dom": "17.0.*",
     "react-native": "^0.70.1",
+    "react-native-linear-gradient": "2.6.2",
     "react-native-web": "0.18.*",
     "react-scripts": "^5.0.1"
   },
@@ -28,6 +29,11 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
+    ],
+    "rnpm": {
+      "assets": [
+        "./assets/fonts/Averia"
+      ]
+    }
   }
 }

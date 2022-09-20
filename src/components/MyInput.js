@@ -7,10 +7,10 @@ const MyInput = (props) => {
   const { rotulo, valor, setText } = props;
 
   return (
-    <View>
+    <View style={styles.grupo}>
       <Text style={styles.rotulo}>{rotulo}</Text>
       <TextInput
-        keyboardType="decimal-pad"
+        keyboardType="default"
         style={styles.textInput}
         value={valor}
         onChangeText={setText}
@@ -21,13 +21,25 @@ const MyInput = (props) => {
 
 const styles = StyleSheet.create({
   rotulo: {
-    fontSize: 40
+    fontSize: "28px",
+    color: "#FFFFFF",
+    padding: 10
+    //flexDirection: 'row'
   },
+
   textInput: {
-    fontSize: 40,
+    fontSize: "28px",
     borderWidth: 2,
     borderColor: "gray",
-    width: 150
+    width: "400px",
+    backgroundColor: "#FFFFFF"
+    //flexDirection: 'row'
+  },
+
+  grupo: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 12
   }
 });
 
