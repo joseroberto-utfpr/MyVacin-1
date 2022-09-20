@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React Native for Web starter template",
   "keywords": [],
-  "main": "src/index.js",
+  "main": "index.js",
   "dependencies": {
     "expo-linear-gradient": "^11.4.0",
     "react": "17.0.*",
