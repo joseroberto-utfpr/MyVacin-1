@@ -35,5 +35,16 @@
         "./assets/fonts/Averia"
       ]
     }
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joseroberto-utfpr/MyVacin1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joseroberto-utfpr/MyVacin1/issues"
+  },
+  "homepage": "https://github.com/joseroberto-utfpr/MyVacin1#readme"
 }
